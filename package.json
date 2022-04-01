@@ -1,14 +1,14 @@
 {
   "name": "@antimatter-studios/serverless-cognito-trigger",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "src/index.js",
   "type": "commonjs",
   "description": "A serverless plugin that will attach a lambda trigger to a cognito user pool.",
   "author": "Chris Thomas <chris.thomas@antimatter-studios.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antimatter-studios/serverless-cognito-user-pool.git"
+    "url": "https://github.com/antimatter-studios/serverless-cognito-trigger.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,7 +24,7 @@
     "aws cognito"
   ],
   "bugs": {
-    "url": "https://github.com/antimatter-studios/serverless-cognito-user-pool/issues"
+    "url": "https://github.com/antimatter-studios/serverless-cognito-trigger/issues"
   },
-  "homepage": "https://github.com/antimatter-studios/serverless-cognito-user-pool#readme"
+  "homepage": "https://github.com/antimatter-studios/serverless-cognito-trigger#readme"
 }
