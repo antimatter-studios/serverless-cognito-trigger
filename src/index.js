@@ -1,24 +1,19 @@
 'use strict';
 
 class ServerlessPlugin {
-    constructor(serverless, opts) {
+    constructor(serverless) {
         this._serverless = serverless;
-        this._opts = opts;
-        this._provider = null
+        
+        this._serverless.configSchemaHandler.defineFunctionEvent('aws', 'cognitoTrigger', {
+            type: 'object',
+            properties: {
+                poolId: { type: 'string' },
+                trigger: { type: 'string' },
+            },
+            required: ['poolId', 'trigger'],
+        });
 
-        if(this._serverless){
-            this._provider = this._serverless.getProvider('aws');
-
-            this._serverless.configSchemaHandler.defineFunctionEvent('providerName', 'cognitoTrigger', {
-                type: 'object',
-                properties: {
-                    poolId: { type: 'string' },
-                    trigger: { type: 'string' },
-                },
-                required: ['poolId', 'trigger'],
-            });
-        }
-
+        this._provider = this._serverless.getProvider('aws');
         if(this._provider){
             this.hooks = {
                 'deploy:deploy': () => this.process(this.attachLambda.bind(this)),

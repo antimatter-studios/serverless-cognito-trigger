@@ -1,7 +1,7 @@
 {
   "name": "@antimatter-studios/serverless-cognito-trigger",
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "src/index.js",
   "type": "commonjs",
   "description": "A serverless plugin that will attach a lambda trigger to a cognito user pool.",
